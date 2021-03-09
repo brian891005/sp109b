@@ -28,3 +28,8 @@ $(TARGET): sum.c main.c
 clean:
 	rm -f *.o *.exe $(TARGET)
 </code></pre>
+* 執行結果:
+'''
+user@LAPTOP-8K49E37L MINGW64 ~/Desktop/系統程式/sp/02-gcc/05-make/01-makeExe (master) $ make
+gcc -std=c99 -O0 sum.c main.c -o run  #指令碼，造出執行檔 run
+'''
