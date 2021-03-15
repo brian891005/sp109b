@@ -5,6 +5,56 @@
 ![Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/compiler.jpg)
 * 參考陳忠誠老師的系統程式課程圖
 
+# 指標
+變數提供具名稱的記憶體儲存空間，一個變數關聯一個資料型態、儲存的值與儲存空間的位址值。指標則是指出變數位置的所在，利用* 的方式來指向所儲存的記憶體位址。
+
+* 指標例子
+```
+#include <stdio.h>
+
+int main(void) {
+    int n = 10;
+    int *p = &n ;
+
+    printf("n 的位址：%p\n", &n);
+    printf("p 儲存的位址：%p\n", p);
+
+    return 0;
+}
+```
+* 執行結果
+```
+n 的位址：0061FEC8      
+p 儲存的位址：0061FEC8  
+```
+* 從p來看
+```
+#include <stdio.h>
+
+int main(void) {
+    int n = 10;
+    int *p = &n;
+
+    printf("指標 p 儲存的值：%p\n", p);
+    printf("取出 p 儲存位址處之值：%d\n", *p);
+
+    return 0;
+}
+```
+* 執行結果
+```
+指標 p 儲存的值：0061FEC8
+取出 p 儲存位址處之值：10
+```
+
+### 野指標
+如果宣告指標但不指定初值，則指標儲存的位址是未知的，存取未知位址的記憶體內容是危險的。會造成不可預知的結果(隨機指向)，最好為指標設定初值，如果指標一開始不儲存任何位址，可設定初值為 0。
+
+* 例子
+```
+int *p; 
+*p = 10;
+```
 ### fread()參數用法
 ```
 size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream)
