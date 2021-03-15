@@ -22,7 +22,7 @@ int types[TMAX];
 
 int readText(char *fileName, char *text, int size) {
   FILE *file = fopen(fileName, "r");
-  int len = fread(text, 1, size, file);
+  int len = fread(text, 1, size, file); //印出code長度,並將sum.c存入text內
   text[len] = '\0';
   fclose(file);
   return len;

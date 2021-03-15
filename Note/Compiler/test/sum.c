@@ -1,7 +1,6 @@
+#include "sum.h"
 
-s=0;
-i=1;
-while (i < 11) {
-  s = s + i;
-  i = i + 1;
+int main() {
+  int t = sum(10);
+  printf("sum(10)=%d\n", t);
 }
