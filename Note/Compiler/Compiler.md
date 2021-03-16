@@ -46,6 +46,37 @@ int main(void) {
 指標 p 儲存的值：0061FEC8
 取出 p 儲存位址處之值：10
 ```
+### 指標與陣列
+在宣告陣列之後，使用到陣列變數時，會取得首元素的位址。陣列索引其實是相對於首元素位址的位移量，下面這個程式以指標運算與陣列索引操作，顯示出相同的對應位址值：
+```
+#include <stdio.h>
+#define LEN 10
+
+int main(void) {
+    int arr[LEN] = {0};
+    int *p = arr;
+
+    for(int i = 0; i < LEN; i++) {
+        printf("&arr[%d]: %p", i ,&arr[i]);
+        printf("\t\tptr + %d: %p\n", i, p + i);
+    }
+
+    return 0;
+}
+```
+* 顯示結果
+```
+&arr[0]: 0061FEA0               ptr + 0: 0061FEA0
+&arr[1]: 0061FEA4               ptr + 1: 0061FEA4
+&arr[2]: 0061FEA8               ptr + 2: 0061FEA8
+&arr[3]: 0061FEAC               ptr + 3: 0061FEAC
+&arr[4]: 0061FEB0               ptr + 4: 0061FEB0
+&arr[5]: 0061FEB4               ptr + 5: 0061FEB4
+&arr[6]: 0061FEB8               ptr + 6: 0061FEB8
+&arr[7]: 0061FEBC               ptr + 7: 0061FEBC
+&arr[8]: 0061FEC0               ptr + 8: 0061FEC0
+&arr[9]: 0061FEC4               ptr + 9: 0061FEC4
+```
 
 ### 野指標
 如果宣告指標但不指定初值，則指標儲存的位址是未知的，存取未知位址的記憶體內容是危險的。會造成不可預知的結果(隨機指向)，最好為指標設定初值，如果指標一開始不儲存任何位址，可設定初值為 0。
