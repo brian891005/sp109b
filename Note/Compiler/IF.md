@@ -1,5 +1,6 @@
 # 程式如何編譯if
 * code
+![IF](https://github.com/brian891005/sp109b/blob/main/Note/Compiler/compiler.c)
 ```
 //IF = if (E) STMT
 void IF() {
@@ -25,6 +26,7 @@ void IF() {
 ```
 
 * if1.c  code
+![if1.c](https://github.com/brian891005/sp109b/blob/main/Note/Compiler/test/if1.c)
 ```
 i=3;
 if(i<3){
@@ -49,6 +51,7 @@ goto L1
 ```
 
 * if2.c code
+![if2.c](https://github.com/brian891005/sp109b/blob/main/Note/Compiler/test/if2.c)
 ```
 a=5;
 if (a>3) {
