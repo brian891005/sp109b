@@ -1,7 +1,9 @@
 # 程式如何編譯if
 
 * code
-檔案<https://github.com/brian891005/sp109b/blob/main/Note/Compiler/compiler.c>
+
+<a href="https://github.com/brian891005/sp109b/blob/main/Note/Compiler/compiler.c">檔案</a>
+
 ```
 //IF = if (E) STMT
 void IF() {
@@ -27,7 +29,9 @@ void IF() {
 ```
 
 * if1.c  code
-檔案<https://github.com/brian891005/sp109b/blob/main/Note/Compiler/test/if1.c>
+
+<a href="https://github.com/brian891005/sp109b/blob/main/Note/Compiler/test/if1.c">檔案</a>
+
 ```
 i=3;
 if(i<3){
@@ -52,7 +56,9 @@ goto L1
 ```
 
 * if2.c code
-檔案<https://github.com/brian891005/sp109b/blob/main/Note/Compiler/test/if2.c>
+
+<a href='https://github.com/brian891005/sp109b/blob/main/Note/Compiler/test/if2.c'>檔案</a>
+
 ```
 a=5;
 if (a>3) {
