@@ -32,4 +32,32 @@
 * 先以sudo apt install default-jre 下載java編譯器
 * 以HelloWorld.java當例子
     * javac HelloWorld.java ------>>>編譯檔案跑出class檔
-    * javap -c HelloWorld.class ------->>>將jsva程式還原成組合語言
+    * javap -c HelloWorld.class ------->>>將java程式還原成組合語言
+
+* 組合語言檔
+```
+Compiled from "HelloWorld.java"
+class HelloWorld {
+  HelloWorld();   
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void main(java.lang.String[]);
+    Code:
+       0: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;
+       3: ldc           #13                 // String Hello World!
+       5: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+       8: return
+}
+```
+
+## 虛擬機QEMU
+* 作業系統開法
+* 一個平台跑多個平台程式
+
+## C4
+* C4 編譯完成後，會產生一種《堆疊機機器碼》放在記憶體內，然後 [虛擬機](vm) 會立刻執行該機器碼。
+* 可以編譯自己的編譯器
+* C4 在 Windows / Linux / MAC 中都可以執行，在 windows 必須在有支援 open, read 這些 POSIX 檔案函式庫環境下才能編譯！
