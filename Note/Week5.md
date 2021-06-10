@@ -28,4 +28,8 @@
     
 ![Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/StackMachine.jpg)
 
-## multipass使用
+## 虛擬機java使用
+* 先以sudo apt install default-jre 下載java編譯器
+* 以HelloWorld.java當例子
+    * javac HelloWorld.java ------>>>編譯檔案跑出class檔
+    * javap -c HelloWorld.class ------->>>將jsva程式還原成組合語言
