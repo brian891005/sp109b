@@ -26,4 +26,6 @@
     * 把堆疊的變數抓下來做運算
     * 可以變相成長，但有極限
     
-![Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/Stack Machine.jpg)
+![Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/StackMachine.jpg)
+
+## multipass使用
