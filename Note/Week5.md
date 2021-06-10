@@ -7,8 +7,10 @@
 * 廣義的虛擬機
   * 虛擬機+模擬器
 
-* 虛擬機的種類
+## 虛擬機的種類
+
 ![Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/Vm.jpg)
+
 * 寄生式虛擬機:虛擬機跑在作業系統下
 * 程序虛擬機: 有自己的指令集，ex:JVM
 
@@ -23,4 +25,5 @@
 * 堆疊機
     * 把堆疊的變數抓下來做運算
     * 可以變相成長，但有極限
+    
 ![Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/ Stack Machine.jpg)
