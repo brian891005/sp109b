@@ -46,6 +46,10 @@ location of stack: 0x7ffc816b14d4
 * 只要在shell輸入kill+PID(你要刪除的行程代號)--->刪除該行程
 
 ## pthread函式庫
+創造一個獨立執行函數
+
+語法:pthread_create(&thread1, NULL, &print_george, NULL);    // 執行緒 print_george
+
 * 以georgeMary.c來看
 * 執行步驟
     * gcc georgeMary.c -o georgeMary -lpthread --->-l為的是連結外部函式庫
