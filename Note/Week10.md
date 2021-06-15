@@ -197,7 +197,7 @@ int main()
 
 ## 記憶體管理
 
-[Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/memory_manage.jpg)
+![Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/memory_manage.jpg)
 
 * 分配策略
 1. First Fit----->串列開頭尋找，第一個足夠大的區塊
@@ -207,4 +207,4 @@ int main()
 
 * 記憶體不足問題
 
-[Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/memory_problem.jpg)
+![Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/memory_problem.jpg)
