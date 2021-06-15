@@ -138,6 +138,10 @@ int main()
 
 ![Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/deadlock.jpg)
 
+* 死結的處理方法
+
+[Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/deadlock_solution.jpg)
+
 ## 協同式多工
 
 * 當一個程式當機會導致整個系統失效
@@ -161,6 +165,14 @@ int main()
 
 ![Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/process_condition.jpg)
 
+* 行程同步機制
+    * 臨界區間---->修改共用變數的程式區塊
+    * 利用鎖定等方式，並免兩個行程同時進入臨界趨堅的可能性，以便防止競爭狀況發生
+    * 方法
+        1. 禁止中斷
+        2. 支援同步的硬體
+        3. 利用號誌等，鎖定機制
+
 ## 排程器
 ### 排程方法
 
@@ -182,3 +194,17 @@ int main()
 * 行程v.s執行續
 
 ![Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/process_vs_thread.jpg)
+
+## 記憶體管理
+
+[Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/memory_manage.jpg)
+
+* 分配策略
+1. First Fit----->串列開頭尋找，第一個足夠大的區塊
+2. Next-Fit------>環狀串列結構，從上次搜尋停止點找到第一個足夠大的區塊
+3. Best-Fit------>從頭到尾找到最接近的可用區塊大小
+4. Worst-Fit----->將最大的區塊分給程是
+
+* 記憶體不足問題
+
+[Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/memory_problem.jpg)
