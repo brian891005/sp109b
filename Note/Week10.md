@@ -165,3 +165,20 @@ int main()
 ### 排程方法
 
 ![Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/process_way.jpg)
+
+* 循環分時排程
+    * 最常使用的排程
+    * 方法
+        * 事先分配時間片段
+        * 設定中斷時間，再將CPU控制權交給該行程
+        * 用空檔切換下個行程，循環進行
+
+## 執行續(Thread)
+* 定義
+    * 又被稱為輕量級行程
+    * 執行續之間共用記憶體空間與相關資源
+    * 切換動作快速，只須保存暫存器
+
+* 行程v.s執行續
+
+![Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/process_vs_thread.jpg)
