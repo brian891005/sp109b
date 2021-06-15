@@ -158,6 +158,7 @@ int main()
     * 當行程霸佔CPU時，可用中斷機制奪回cpu控制權
 
 * 行程狀態表示圖
+
 ![Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/process_condition.jpg)
 
 ## 排程器
