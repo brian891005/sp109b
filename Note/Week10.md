@@ -17,7 +17,7 @@
 
 ![Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/單行程與多工.jpg)
 
-* 範例(共用函數) race.c
+* 範例(共用變數) race.c
     * gcc race.c -o race -lpthread
     * ./race
     * race condition(競爭情況模擬)--->組合語言不照順序跑
@@ -132,3 +132,35 @@ int main()
   printf("counter=%d\n", counter);
 }
 ```
+
+* 當lock不好會出現死結
+* 示意圖
+
+![Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/deadlock.jpg)
+
+## 協同式多工
+
+* 當一個程式當機會導致整個系統失效
+* 偽多工系統 
+
+## 行程行為模式
+
+* 動作可分兩種
+    * 使用CPU------------------->進行計算工作
+    * 使用I/O(input/output)----->進行輸出入動作
+* 作業系統利用輸出入空檔切換行程
+
+![Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/process_cpu_io.jpg)
+
+* 利用中斷機制來避免當機
+    * 處理狀況--->無窮迴圈
+    * 在CPU執行下個行程時，設定中斷時間點
+    * 當行程霸佔CPU時，可用中斷機制奪回cpu控制權
+
+* 行程狀態表示圖
+![Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/process_condition.jpg)
+
+## 排程器
+### 排程方法
+
+![Pic](https://github.com/brian891005/sp109b/blob/main/Note/IMG/process_way.jpg)
