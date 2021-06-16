@@ -227,3 +227,66 @@ brian Hi // 讀檔點
 brian Hi
 brian Hi
 ```
+
+#### fecho.c---->讀寫檔
+* 步驟
+1. gcc fecho1.c -o fecho1
+2. ./fecho
+```
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#define SMAX 128
+
+int main() {
+  close(0);                      // 關閉標準輸入 stdin
+  close(1);                      // 關閉標準輸出 stdout
+  int a = open("a.txt", O_RDWR);         // 此時 open，會找沒被使用的最小檔案代號 0
+  int b = open("b.txt", O_CREAT|O_RDWR, 0644); // 此時 open，會找沒被使用的最小檔案代號 1
+  char line[SMAX];
+  gets(line);                    // 從 0 (a.txt) 讀入一行字 line
+  puts(line);                    // 輸出 line 到 1 (b.txt)
+  printf("a=%d, b=%d\n", a, b);
+}
+
+```
+* 結果
+```
+ubuntu@foo1:~/sp/08-posix/04-fs/02-fecho$ ./fecho
+>>>>>>>>>>>>>>>>>>>>>a.txt結果>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ubuntu@foo1:~/sp/08-posix/04-fs/02-fecho$ cat a.txt
+Hello, File descriptor !
+>>>>>>>>>>>>>>>>>>>>>b.txt結果>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ubuntu@foo1:~/sp/08-posix/04-fs/02-fecho$ cat b.txt
+Hello, File descriptor !
+a=0, b=1
+```
+
+#### myshell.c---->讀寫檔
+* 步驟
+1. gcc myshell.c -o myshell
+2. ./myshell
+```
+#include "../myshell.h"
+
+int main(int argc, char *argv[]) {
+  char path[SMAX], cmd[SMAX];
+  getcwd(path, SMAX-1); // 取得初始路徑
+  while (1) { // 不斷等待使用者輸入命令並執行之
+    printf("myshell:%s $ ", path); // 顯示提示訊息
+    fgets(cmd, SMAX-1, stdin);     // 等待使用者輸入命令
+    system(cmd);                   // 執行命令
+  }
+}
+
+```
+
+* 結果
+```
+ubuntu@foo1:~/sp/08-posix/05-myshell/v1$ ./myshell
+myshell:/home/ubuntu/sp/08-posix/05-myshell/v1 $ ls
+README.md  myshell  myshell.c
+```
+簡易版shell僅存在於資料夾内
