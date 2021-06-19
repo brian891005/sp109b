@@ -1,7 +1,7 @@
 # 系統程式筆記目錄
 週次 | 內容
 ---- | ----
-[第一週、第二週](https://github.com/brian891005/sp109b/blob/main/Note/How-to-use-Makefile.md) | 系統程式課程地圖 <br>makefile的使用<br> 程式語言的歷史演變  
+[第一週、第二週](https://github.com/brian891005/sp109b/blob/main/Note/How-to-use-Makefile.md) | 系統程式課程地圖 <br> makefile的使用
 [第三週](https://github.com/brian891005/sp109b/blob/main/Note/Compiler/test/lexer.md) | compiler運作方式 <br>  lexer解析 <br> 指標複習 
 [第四週](https://github.com/brian891005/sp109b/tree/main/Note/Compiler/IF) | 安裝multipass <br> mutipass使用Linux <br> IF的執行
 [第五週](https://github.com/brian891005/sp109b/blob/main/Note/Week5.md) | 虛擬機的講解 <br>中間碼 <br>指令集
