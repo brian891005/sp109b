@@ -12,3 +12,7 @@
 [第十一週](https://github.com/brian891005/sp109b/blob/main/Note/Week11.md) | 生產者消費者問題(演算法) <br> 信號值 <br> 輸出入 <br> 哲學家用餐問題
 [第十二週](https://github.com/brian891005/sp109b/blob/main/Note/Week12.md) | linux的行程管理 <br> 程式實作 <br>了解父子行程 <br>簡易版shell
 [第十三週](https://github.com/brian891005/sp109b/blob/main/Note/Week13.md) |程式實作: <br> stderr <br> blocking <br> nonblocking <br> time 
+[第十四週](https://github.com/brian891005/sp109b/blob/main/Note/Week13.md) |程式實作: <br> http
+
+#### 授權聲明
+* [授權申明](https://github.com/brian891005/sp109b/blob/main/Note/授權聲明/README.md)
